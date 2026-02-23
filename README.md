@@ -1,4 +1,4 @@
-# h2c-indexer-simple-service
+# h2c-indexer-service
 
 Service indexer for [helmfile2compose](https://github.com/helmfile2compose/helmfile2compose) — indexes K8s Service manifests and builds alias/port maps for hostname resolution and port remapping.
 
@@ -19,7 +19,7 @@ Service indexer for [helmfile2compose](https://github.com/helmfile2compose/helmf
 Via [h2c-manager](https://github.com/helmfile2compose/h2c-manager):
 
 ```sh
-python3 h2c-manager.py simple-service-indexer
+python3 h2c-manager.py service-indexer
 ```
 
 Or listed in `distribution.json` — installed automatically when building a distribution.
