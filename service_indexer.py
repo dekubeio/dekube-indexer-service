@@ -1,14 +1,15 @@
 """Service indexer — populates ctx.services_by_selector, ctx.alias_map, ctx.service_port_map."""
 
-from h2c import ConverterResult, IndexerConverter, _build_alias_map, _build_service_port_map
+from h2c import ConverterResult, IndexerConverter, _build_alias_map, _build_service_port_map  # pylint: disable=import-error  # h2c resolves at runtime
 
 
-class ServiceIndexer(IndexerConverter):
+class ServiceIndexer(IndexerConverter):  # pylint: disable=too-few-public-methods  # contract: one class, one method
     """Index Service manifests and build alias/port maps."""
     name = "service"
     kinds = ["Service"]
 
     def convert(self, _kind, manifests, ctx):
+        """Index Service manifests and build alias/port maps."""
         for svc_manifest in manifests:
             svc_meta = svc_manifest.get("metadata") or {}
             svc_spec = svc_manifest.get("spec") or {}
