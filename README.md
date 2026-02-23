@@ -2,7 +2,7 @@
 
 Service indexer for [helmfile2compose](https://github.com/helmfile2compose/helmfile2compose) — indexes K8s Service manifests and builds alias/port maps for hostname resolution and port remapping.
 
-**The Weaver** — one of the Seven Bishops, the founding extensions of the helmfile2compose distribution.
+**The Weaver** — one of the Eight Monks, the founding extensions of the helmfile2compose distribution.
 
 > Heresy level: 2/10 — reads the maps others consult, names the names others invoke.
 
