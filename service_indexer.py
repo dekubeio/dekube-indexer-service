@@ -1,6 +1,6 @@
 """Service indexer — populates ctx.services_by_selector, ctx.alias_map, ctx.service_port_map."""
 
-from h2c import ConverterResult, IndexerConverter, _build_alias_map, _build_service_port_map  # pylint: disable=import-error  # h2c resolves at runtime
+from dekube import ConverterResult, IndexerConverter, _build_alias_map, _build_service_port_map  # pylint: disable=import-error  # h2c resolves at runtime
 
 
 class ServiceIndexer(IndexerConverter):  # pylint: disable=too-few-public-methods  # contract: one class, one method
