@@ -16,9 +16,9 @@ class ServiceIndexer(IndexerConverter):  # pylint: disable=too-few-public-method
             svc_name = svc_meta.get("name", "")
             ctx.services_by_selector[svc_name] = {
                 "name": svc_name,
-                "namespace": svc_meta.get("namespace", ""),
+                "namespace": svc_meta.get("namespace") or "",
                 "selector": svc_spec.get("selector") or {},
-                "type": svc_spec.get("type", "ClusterIP"),
+                "type": svc_spec.get("type") or "ClusterIP",
                 "ports": svc_spec.get("ports") or [],
             }
         ctx.alias_map.update(build_alias_map(ctx.manifests, ctx.services_by_selector))
